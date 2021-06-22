@@ -1,0 +1,33 @@
+
+.warpper{
+  background-attachment: fixed, scroll; 
+  background-image: url(assets/background.svg);
+  background-size: cover; 
+  display: grid;
+  grid-template-rows:repeat(4) !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  grid-gap: 20px 15px !important;
+  transform: none;
+}
+
+.header, .timer {
+  grid-column: 2 ;
+}
+.header{
+  grid-row: 1;
+}
+.timer{
+  grid-row: 4;
+}
+.content{
+  grid-column: 1/4;
+  grid-row: 3;
+}
+@media only screen and (max-width: 950px) {
+  .timer{
+    display: flex;
+    grid-column: 1;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+  }
